@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }) => {
       setLoading(false);
       let message;
       if (!err.response) {
-        message = 'Unable to connect to backend server. Please ensure backend is running on http://localhost:5000.';
+        message = 'Unable to connect to backend server. Please check your internet connection or backend server status.';
       } else {
         message = err.response.data?.message || 'Invalid email or password.';
       }
